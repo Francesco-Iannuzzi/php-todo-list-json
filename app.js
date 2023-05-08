@@ -12,6 +12,8 @@ createApp({
 
         add_task() {
             console.log('add task', this.new_task);
+            this.tasks.push(this.new_task)
+            console.log(this.tasks);
         }
     },
     mounted() {

@@ -25,15 +25,17 @@ Bonus
 
 */
 
-$tasks = [
-    "HTML",
-    "CSS",
-    "JAVASCCRIPT",
-    "PHP",
-    "LARAVEL"
-];
+// $tasks = [
+//     "HTML",
+//     "CSS",
+//     "JAVASCCRIPT",
+//     "PHP",
+//     "LARAVEL"
+// ];
+
+$tasks_json = file_get_contents('tasks.json');
 
 
 header('Content-type: application/json');
 
-echo json_encode($tasks);
+echo json_encode($tasks_json);
