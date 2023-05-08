@@ -5,6 +5,13 @@ createApp({
         return {
             pathTasks: './server.php',
             tasks: [],
+            new_task: '',
+        }
+    },
+    methods: {
+
+        add_task() {
+            console.log('add task', this.new_task);
         }
     },
     mounted() {

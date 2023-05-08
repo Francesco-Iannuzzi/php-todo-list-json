@@ -15,14 +15,22 @@
 <body>
 
     <div id="app">
-        <div class="container pt-4">
-            <h1 class="text-center">Todo List</h1>
-            <div class="container w-50 text-center py-5">
+        <div class="container pt-5">
+            <h1 class="text-center mb-3 text-light">Todo List</h1>
+            <div class="container w-50 text-center pb-5">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item" v-for="task in tasks">
                         {{task}}
                     </li>
                 </ul>
+                <!-- /tasks list -->
+                <div class="m-3 d-flex gap-3">
+                    <input type="text" v-model="new_task" class="form-control border-0" id="add_task" placeholder="Add new Task">
+                    <button type="submit" @click="add_task" class="btn btn-outline-warning">
+                        Submit
+                    </button>
+                </div>
+                <!-- /input task + button -->
             </div>
         </div>
     </div>
