@@ -25,7 +25,7 @@
                 </ul>
                 <!-- /tasks list -->
                 <div class="m-3 d-flex gap-3">
-                    <input type="text" v-model="new_task" class="form-control border-0" id="add_task" placeholder="Add new Task">
+                    <input type="text" v-model="new_task" @keyup.enter="add_task" class="form-control border-0" id="add_task" placeholder="Add new Task">
                     <button type="submit" @click="add_task" class="btn btn-outline-warning">
                         Submit
                     </button>
