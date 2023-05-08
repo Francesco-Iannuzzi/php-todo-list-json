@@ -39,10 +39,20 @@ Bonus
 </head>
 
 <body>
-    <h1>ciao</h1>
+
+    <div id="app">
+        {{ message }}
+        <h1>ciao</h1>
+    </div>
+
+
+
 
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
     <!-- /vue script -->
+
+    <script src="./app.js"></script>
+    <!-- /my script -->
 
 </body>
 
