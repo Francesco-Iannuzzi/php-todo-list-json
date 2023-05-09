@@ -2,7 +2,10 @@
 
 
 if (isset($_POST['new_task'])) {
-    $task = $_POST['new_task'];
+    $task = [
+      "text" => $_POST['new_task'],
+      "done" => false  
+    ];
 
     $tasks_string = file_get_contents('tasks.json');
     $tasks_array = json_decode($tasks_string, true);

@@ -1,1 +1,26 @@
-["PYTHON","HTML","CSS","JAVASCCRIPT","PHP","LARAVEL"]
+[
+    {
+        "text": "PYTHON",
+        "done": false
+    },
+    {
+        "text": "HTML",
+        "done": false
+    },
+    {
+        "text": "CSS",
+        "done": false
+    },
+    {
+        "text": "JAVASCCRIPT",
+        "done": false
+    },
+    {
+        "text": "PHP",
+        "done": false
+    },
+    {
+        "text": "LARAVEL",
+        "done": false
+    }
+]

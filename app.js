@@ -29,6 +29,11 @@ createApp({
                 })
 
         },
+        task_completed(element) {
+            console.log('task completed');
+            element.done = true;
+            console.log(element);
+        },
     },
     mounted() {
         axios
