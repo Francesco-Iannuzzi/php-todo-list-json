@@ -8,6 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <!-- /Bootstrap Style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- /Font Awesome -->
     <link rel="stylesheet" href="./style.css">
     <!-- /my style -->
     <title>Todo List PHP</title>
@@ -20,10 +24,14 @@
             <h1 class="text-center mb-3 text-light">Todo List</h1>
             <div class="container w-50 text-center pb-5">
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item" v-for="(task, index) in tasks">
-                        <span :class="{ 'text-decoration-line-through': task.done }" @click="task_completed(task)">
+                    <li class="list-group-item d-flex justify-content-between" v-for="(task, index) in tasks">
+                        <span :class="{ 'text-decoration-line-through': task.done }" class="align-self-center"
+                            @click="task_completed(task)">
                             {{task.text}}
                         </span>
+                        <button type="button" class="btn btn-danger">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
                     </li>
                 </ul>
                 <!-- /tasks list -->
