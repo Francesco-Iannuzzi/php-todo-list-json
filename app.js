@@ -11,10 +11,24 @@ createApp({
     methods: {
 
         add_task() {
-            console.log('add task', this.new_task);
-            this.tasks.push(this.new_task);
-            console.log(this.tasks);
-        }
+
+            const data = {
+                new_task: this.new_task
+            }
+
+            axios.post(
+                './storeTasks.php',
+                data,
+                {
+                    headers: { 'Content-Type': 'multipart/form-data' }
+                }).then(response => {
+                    this.tasks = response.data
+                })
+                .catch(error => {
+                    console.error(error.message);
+                })
+
+        },
     },
     mounted() {
         axios

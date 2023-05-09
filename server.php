@@ -26,8 +26,8 @@ Bonus
 */
 
 
-$tasks_json = file_get_contents('tasks.json');
+$tasks_json_string = file_get_contents('tasks.json');
 
 header('Content-type: application/json');
 
-echo $tasks_json;
+echo $tasks_json_string;
