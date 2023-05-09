@@ -30,11 +30,7 @@ createApp({
 
         },
         task_completed(element) {
-            if (element.done) {
-                element.done = false
-            } else {
-                element.done = true
-            }
+            element.done = !element.done
         },
     },
     mounted() {
